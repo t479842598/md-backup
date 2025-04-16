@@ -1,5 +1,5 @@
 <div align="center">
-![doocs-md](https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/logo-2.png)
+![mdback](https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/logo-2.png)
 </div>
 <h1 align="center">微信 Markdown 编辑器（战渊专版）</h1>
 
@@ -91,7 +91,10 @@ Markdown 文档自动即时渲染为微信图文，让你不再为微信内容�
 1. 在原设备上导出备份文件
 2. 将备份文件传输到新设备
 3. 在新设备上导入备份文件
-   ![备份](https://gitee.com/tangzhanyuan/gallery-zy/blob/main/backup.png)
+
+---
+
+![备份](https://gitee.com/tangzhanyuan/gallery-zy/raw/main/backup.png)
 
 ## 目前支持哪些图床
 
