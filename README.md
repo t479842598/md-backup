@@ -1,8 +1,4 @@
-<div,align="center">
-
 [![doocs-md](https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/logo-2.png)](https://github.com/doocs/md)
-
-</div,align=>
 
 <h1 align="center">微信 Markdown 编辑器（战渊专版）</h1>
 

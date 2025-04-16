@@ -16,7 +16,7 @@ function onUpdate(val: boolean) {
 
 const links = [
   // { label: `GitHub 仓库`, url: `https://gitee.com/tangzhanyuan/md-backup/tree/main/` },
-  { label: `Gitee 仓库`, url: `https://gitee.com/doocs/md` },
+  { label: `Gitee 仓库`, url: `https://gitee.com/tangzhanyuan/md-back` },
   // { label: `GitCode 仓库`, url: `https://gitcode.com/doocs/md` },
 ]
 
