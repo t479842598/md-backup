@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>通知设计方案</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+      .design-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .design-title {
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .design-item {
+        margin-bottom: 40px;
+        padding: 20px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+      }
+      .design-item h2 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+      .notification {
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      /* 设计1：简约风格 */
+      .design-1 .notification {
+        background: #f8f9fa;
+        border-left: 4px solid #3498db;
+      }
+      .design-1 .scroll-text {
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+      }
+      /* 设计2：渐变背景 */
+      .design-2 .notification {
+        background: linear-gradient(90deg, #3498db, #2980b9);
+        color: white;
+      }
+      .design-2 .scroll-text {
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+      }
+      /* 设计3：卡片式 */
+      .design-3 .notification {
+        background: white;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+      .design-3 .scroll-text {
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+      }
+      /* 设计4：悬浮式 */
+      .design-4 .notification {
+        background: rgba(52, 152, 219, 0.1);
+        border: 1px solid rgba(52, 152, 219, 0.2);
+        backdrop-filter: blur(5px);
+      }
+      .design-4 .scroll-text {
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+      }
+      @keyframes scroll {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="design-container">
+      <h1 class="design-title">通知设计方案</h1>
+
+      <!-- 设计1：简约风格 -->
+      <div class="design-item design-1">
+        <h2>设计1：简约风格</h2>
+        <div class="notification">
+          <div class="scroll-text">
+            微信markdown编辑器项目，更新内容为增加数据备份和自动备份，需要定制联系公众号：战渊IT助手
+          </div>
+        </div>
+      </div>
+
+      <!-- 设计2：渐变背景 -->
+      <div class="design-item design-2">
+        <h2>设计2：渐变背景</h2>
+        <div class="notification">
+          <div class="scroll-text">
+            微信markdown编辑器项目，更新内容为增加数据备份和自动备份，需要定制联系公众号：战渊IT助手
+          </div>
+        </div>
+      </div>
+
+      <!-- 设计3：卡片式 -->
+      <div class="design-item design-3">
+        <h2>设计3：卡片式</h2>
+        <div class="notification">
+          <div class="scroll-text">
+            微信markdown编辑器项目，更新内容为增加数据备份和自动备份，需要定制联系公众号：战渊IT助手
+          </div>
+        </div>
+      </div>
+
+      <!-- 设计4：悬浮式 -->
+      <div class="design-item design-4">
+        <h2>设计4：悬浮式</h2>
+        <div class="notification">
+          <div class="scroll-text">
+            微信markdown编辑器项目，更新内容为增加数据备份和自动备份，需要定制联系公众号：战渊IT助手
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
