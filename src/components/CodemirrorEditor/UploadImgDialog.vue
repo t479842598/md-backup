@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<scri,t setup lang="ts">
 import { useDisplayStore } from '@/stores'
 import { checkImage } from '@/utils'
 import { toTypedSchema } from '@vee-validate/yup'
@@ -285,7 +285,7 @@ function onDrop(e: DragEvent) {
   const file = Array.from(e.dataTransfer!.files)[0]
   beforeImageUpload(file) && emit(`uploadImage`, file)
 }
-</script>
+</scri,t>
 
 <template>
   <Dialog v-model:open="displayStore.isShowUploadImgDialog">

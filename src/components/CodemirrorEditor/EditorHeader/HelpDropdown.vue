@@ -12,9 +12,9 @@ const fundDialogVisible = ref(false)
       <MenubarCheckboxItem @click="aboutDialogVisible = true">
         <span>关于</span>
       </MenubarCheckboxItem>
-      <MenubarCheckboxItem @click="fundDialogVisible = true">
+      <!-- <MenubarCheckboxItem @click="fundDialogVisible = true">
         <span>赞赏</span>
-      </MenubarCheckboxItem>
+      </MenubarCheckboxItem> -->
     </MenubarContent>
   </MenubarMenu>
 

@@ -15,9 +15,9 @@ function onUpdate(val: boolean) {
 }
 
 const links = [
-  // { label: `GitHub 仓库`, url: `https://gitee.com/tangzhanyuan/md-backup/tree/main/` },
+  { label: `GitHub 仓库`, url: `https://github.com/t479842598/md-backup` },
   { label: `Gitee 仓库`, url: `https://gitee.com/tangzhanyuan/md-back` },
-  // { label: `GitCode 仓库`, url: `https://gitcode.com/doocs/md` },
+  { label: `GitCode 仓库`, url: `https://gitcode.com/t479842598/md-back` },
 ]
 
 function onRedirect(url: string) {
