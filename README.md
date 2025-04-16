@@ -1,5 +1,5 @@
 <div align="center">
-![mdback](https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/logo-2.png)
+![logo](https://gitee.com/tangzhanyuan/gallery-zy/raw/main/logo-2.png)
 </div>
 <h1 align="center">微信 Markdown 编辑器（战渊专版）</h1>
 
