@@ -9,18 +9,18 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
 import { VitePluginRadar } from 'vite-plugin-radar'
-import vueDevTools from 'vite-plugin-vue-devtools'
+// import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.SERVER_ENV === `NETLIFY` ? `/` : `/md/`, // 基本路径, 建议以绝对路径跟随访问目录
+  base: `/`, // 修改为根路径
   define: {
     process,
   },
   plugins: [
     vue(),
     UnoCSS(),
-    vueDevTools(),
+    // vueDevTools(),
     nodePolyfills({
       include: [`path`, `util`, `timers`, `stream`, `fs`],
       overrides: {
@@ -63,9 +63,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        chunkFileNames: `static/js/md-[name]-[hash].js`,
-        entryFileNames: `static/js/md-[name]-[hash].js`,
-        assetFileNames: `static/[ext]/md-[name]-[hash].[ext]`,
+        chunkFileNames: `static/js/[name]-[hash].js`,
+        entryFileNames: `static/js/[name]-[hash].js`,
+        assetFileNames: `static/[ext]/[name]-[hash].[ext]`,
       },
     },
   },
