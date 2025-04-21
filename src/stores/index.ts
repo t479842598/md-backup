@@ -21,8 +21,6 @@ import {
   exportHTML,
   formatDoc,
 } from '@/utils'
-// 导入备份功能
-import { backupOnSave } from '@/utils/backup'
 
 import { initRenderer } from '@/utils/renderer'
 import CodeMirror from 'codemirror'
@@ -147,8 +145,6 @@ export const useStore = defineStore(`store`, () => {
     formatDoc(editor.value!.getValue()).then((doc) => {
       posts.value[currentPostIndex.value].content = doc
       toRaw(editor.value!).setValue(doc)
-      // 在格式化文档后执行备份
-      backupOnSave()
     })
   }
 
@@ -380,8 +376,6 @@ export const useStore = defineStore(`store`, () => {
     cssEditor.value.on(`update`, () => {
       updateCss()
       getCurrentTab().content = cssEditor.value!.getValue()
-      // 在CSS更新后执行备份
-      backupOnSave()
     })
   })
 
@@ -575,16 +569,6 @@ export const useStore = defineStore(`store`, () => {
   const resetStyleConfirm = () => {
     isOpenConfirmDialog.value = true
   }
-
-  // 对posts数据监控，保存时执行备份
-  watch(() => JSON.stringify(posts.value), () => {
-    backupOnSave()
-  })
-
-  // 对CSS配置监控，保存时执行备份
-  watch(() => JSON.stringify(cssContentConfig.value), () => {
-    backupOnSave()
-  })
 
   return {
     isDark,

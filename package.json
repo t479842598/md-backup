@@ -1,7 +1,7 @@
 {
   "name": "md",
   "type": "module",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "private": false,
   "scripts": {
     "start": "npm run dev",
@@ -51,7 +51,6 @@
     "qiniu-js": "^3.4.2",
     "radix-vue": "^1.9.12",
     "reading-time": "^1.5.0",
-    "shadcn-vue": "^2.0.1",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "tiny-oss": "^0.5.1",

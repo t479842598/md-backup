@@ -251,12 +251,11 @@ onMounted(() => {
 .backup-actions {
   display: flex;
   gap: 0.5rem;
-  justify-content: flex-end;
 }
 
 .icon {
   width: 1rem;
   height: 1rem;
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
 }
 </style>

@@ -4,8 +4,10 @@ import { Toaster } from 'vue-sonner'
 </script>
 
 <template>
-  <Toaster />
-  <CodemirrorEditor />
+  <div class="app-container">
+    <Toaster />
+    <CodemirrorEditor />
+  </div>
 </template>
 
 <style lang="less">
@@ -70,8 +72,16 @@ body {
   &:first-of-type {
     margin-top: 0;
   }
+
   &:hover {
     background: #f0f0f0;
   }
+}
+
+.app-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 </style>

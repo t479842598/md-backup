@@ -1,10 +1,10 @@
 <div align="center">
 
-![logo](https://gitee.com/tangzhanyuan/gallery-zy/raw/main/logo-2.png)
+[![doocs-md](https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/logo-2.png)](https://github.com/doocs/md)
 
 </div>
 
-<h1 align="center">微信 Markdown 编辑器（战渊专版）</h1>
+<h1 align="center">微信 Markdown 编辑器</h1>
 
 <div align="center">
 
@@ -18,15 +18,18 @@ Markdown 文档自动即时渲染为微信图文，让你不再为微信内容�
 
 ## 在线编辑器地址
 
-<!-- - [https://markdown.tang74.top/（原版无备份）](https://markdown.tang74.top/) -->
-
-- [https://mdback.tang74.top/](https://mdback.tang74.top/)
+- [https://md.doocs.org](https://md.doocs.org)
+- [https://doocs-md.pages.dev](https://doocs-md.pages.dev)
 
 注：推荐使用 Chrome 浏览器，效果最佳。
 
 ## 为何开发这款编辑器
 
 现有的开源微信 Markdown 编辑器样式繁杂，排版过程中往往需要额外调整，影响使用效率。为了解决这一问题，我们打造了一款更加简洁、优雅的编辑器，提供更流畅的排版体验。
+
+欢迎各位朋友随时提交 PR，让这款微信 Markdown 编辑器变得更好！如果你有新的想法，也欢迎在 [Discussions 讨论区](https://github.com/doocs/md/discussions)反馈。
+
+注：我们项目最新版本基于 Vue3 开发，基于 Vue2 的旧版本已经不再维护，如果你需要 Vue2 版本，请切换到 [1.x](https://github.com/doocs/md/tree/1.x) 分支。
 
 ## 功能特性
 
@@ -37,67 +40,7 @@ Markdown 文档自动即时渲染为微信图文，让你不再为微信内容�
 - [x] 提供多图上传功能，并可自定义配置图床
 - [x] 便捷的文件导入、导出功能，提升工作效率
 - [x] 内置本地内容管理功能，支持草稿自动保存
-
-## 备份功能详解
-
-编辑器提供了完善的备份功能，帮助您保护重要内容不丢失：
-
-### 备份方式
-
-1. **自动备份**
-
-   - 系统每30分钟自动进行一次备份
-   - 自动保存最近10条备份记录，超出自动清理
-   - 所有自动备份存储在浏览器的IndexedDB中
-
-2. **手动备份**
-
-   - 通过备份管理界面可手动创建备份
-   - 支持添加备份说明，方便识别备份内容
-
-3. **导出备份文件**
-   - 将所有内容和设置导出为JSON文件
-   - 便于长期保存或跨设备传输
-   - 文件名格式：`md-backup-yyyy-MM-dd-HHmmss.json`
-
-### 备份内容
-
-备份包含以下全部数据：
-
-- 所有文章内容及其历史记录
-- 自定义CSS样式配置
-- 主题、字体、字号、颜色等设置
-- 各种功能开关状态(代码块样式、引用状态等)
-
-### 数据恢复
-
-1. **从备份记录恢复**
-
-   - 打开备份管理界面，选择要恢复的备份记录
-   - 点击"恢复"按钮，数据立即恢复
-
-2. **从文件导入恢复**
-   - 点击"导入备份"按钮
-   - 选择之前导出的备份JSON文件
-   - 数据立即恢复到备份时的状态
-
-### 隐私与安全
-
-- 所有备份数据仅保存在您的本地设备上
-- 不会上传到任何服务器，确保数据隐私
-- 建议定期导出备份文件，防止浏览器数据清除导致备份丢失
-
-### 跨设备使用
-
-由于备份存储在本地，跨设备使用需要：
-
-1. 在原设备上导出备份文件
-2. 将备份文件传输到新设备
-3. 在新设备上导入备份文件
-
----
-
-![备份](https://gitee.com/tangzhanyuan/gallery-zy/raw/main/backup.png)
+- [x] 集成主流 AI 模型（如 DeekSeek、OpenAI、通义千问），辅助内容创作
 
 ## 目前支持哪些图床
 
@@ -231,3 +174,74 @@ docker run -d -p 8080:80 doocs/md:latest
 ```
 
 容器运行起来之后，打开浏览器，访问 http://localhost:8080 即可。
+
+关于本项目 Docker 镜像的更多详细信息，可以关注 https://github.com/doocs/docker-md
+
+## 谁在使用
+
+- [Doocs](https://mp.weixin.qq.com/s/RNKDCK2KoyeuMeEs6GUrow)
+- [ApachePulsar](https://mp.weixin.qq.com/s/udU2ZICg60HbspgWTQdYpg)
+- [码云 Gitee](https://mp.weixin.qq.com/s/bnlWqzCarDlR4F27HHXNUg)
+- [掘墓人的小铲子](https://mp.weixin.qq.com/s/FpGIX9viQR6Z9iSCEPH86g)
+- [全网重点](https://mp.weixin.qq.com/s/yB3ZH3jmcF_LbzuKmnR9BQ)
+- [爱码士的内心独白](https://mp.weixin.qq.com/s/oc5Z2t9ykbu_Dezjnw5mfQ)
+- [乐玩 nodejs npm 工具库](https://mp.weixin.qq.com/s/SFde8OsZ8FzNGMHwpmDtrg)
+- [简静慢](https://mp.weixin.qq.com/s/7UG24ZugfI5ZnhUpo8vfvQ)
+- [编程图解](https://mp.weixin.qq.com/s/7bfpKACg7HP-PhBrkpM9IQ)
+- [好酸一柠檬](https://mp.weixin.qq.com/s/CVqmcu_OGG8TQO4FViAQ3w)
+- [不知所云 Hub](https://mp.weixin.qq.com/s/leDCdpvnfk8eZRPRRHwg5w)
+- [柯宁申的叙事屋](https://mp.weixin.qq.com/s/AHHrxu7aIYBpvn3PpVHE_Q)
+- [我的 Beta 世界](https://mp.weixin.qq.com/s/6BO977YG5e_4qYxL4oVQJw)
+- [生化环材](https://mp.weixin.qq.com/s/fqNxIRxTkn6QEPmi4atW9w)
+- [秀宇笔记](https://mp.weixin.qq.com/s/VUlOBFA93eiqZ5ZYGmXzmQ)
+- [IT 王小二](https://mp.weixin.qq.com/s/UU3cH8LvpO_3aeAkkYvZZQ)
+- [小二来碗饭](https://mp.weixin.qq.com/s/49wUuhOEYG-OZPbFc6_NrQ)
+- [青年技术宅](https://mp.weixin.qq.com/s/YDUZ0t_spzeqXiE_Idv3OA)
+- [路引科研](https://mp.weixin.qq.com/s/oinGHCmer1vNE6Hg2OsH1g)
+- [凯文有事找你](https://mp.weixin.qq.com/s/ap_JhwgmfxgqFAIcTF3nKQ)
+- [软件部落库](https://mp.weixin.qq.com/s/itkJtMY-1IkZjIn5fWtShw)
+- [网文小密圈](https://mp.weixin.qq.com/s/_44Ya309DeQzemXLnJUNdQ)
+- [潇洒哥和黑大帅](https://mp.weixin.qq.com/s/k9WbW0zmxl0S2WX2CXQ6cQ)
+- [云原生指北](https://mp.weixin.qq.com/s/qFQBBpjUoqdfnmCeOGqRJQ)
+- [全栈民工](https://mp.weixin.qq.com/s/i7hTPuuJAtcK9G55tep0Uw)
+- [睡不醒的鲤鱼](https://mp.weixin.qq.com/s/14HNDbDIvfDnV7ePEfbyuQ)
+- [Dmego](https://mp.weixin.qq.com/s/4QeZsTL84lbN_HO3kCwEwg)
+- [红岸](https://mp.weixin.qq.com/s/_cNyKqRr8E1ENg9r7IO70Q)
+- [HelloCoder](https://mp.weixin.qq.com/s/ekCoyhT-JjbYsysKBgdJzQ)
+- [前端黑板报](https://mp.weixin.qq.com/s/bnZebWPd5-TgiXgQVUKdaQ)
+- [Web3HackerWorld](https://mp.weixin.qq.com/s/eLuC6e93RR1zCD3w2FgpVA)
+- [StruggleYang](https://mp.weixin.qq.com/s/fKKQrsatC9en3PwWiCL-KQ)
+- [比心技术](https://mp.weixin.qq.com/s/DYzzci2paf10CgW22pkyUQ)
+- [Pyvan](https://mp.weixin.qq.com/s/YeIev850YlFLFrmzxwUcdg)
+- [CloudberryDB](https://mp.weixin.qq.com/s/8-YRch1U4DiXbpbUHQ1rWQ)
+- [也无言](https://mp.weixin.qq.com/s/pxykYtxQtvG1SAFz9SO5gw)
+- [易学历史](https://mp.weixin.qq.com/s/ICOb210BFzuyP49Zf5kj0A)
+- [小盒子的技术分享](https://mp.weixin.qq.com/s/ilKtA4c3_xQK5ZjwrCZIFw)
+- [Code365](https://mp.weixin.qq.com/s/WXBZTqkK1JvYlMg5GWyPhA)
+- [IT 智行](https://mp.weixin.qq.com/s/4eSGBiUX6aC-f6rG5xBq7g)
+- [哪里不会点哪里](https://mp.weixin.qq.com/s/dDe3pyziFjFMbiFO249U4g)
+- [AI 思维车间订阅号](https://mp.weixin.qq.com/s/f3Z0kWtEa5qjNDl8s_wArA)
+- [肖恩聊技术](https://mp.weixin.qq.com/s/hzZHwjKH5IE6H0yNXVhDPQ)
+- [极客范](https://mp.weixin.qq.com/s/AjOTuwY9Cz5Ir7iOVxLn8Q)
+- [AI 决策者洞察](https://mp.weixin.qq.com/s/8To24gWM5RFEZZ7SIHu46w)
+- [小墨是前端](https://mp.weixin.qq.com/s/G7Nw9uBadRGbvTUtv2OtrA)
+- [豆福 AI 笔记](https://mp.weixin.qq.com/s/b_OqX__jVeqgi8QCT9qMBA)
+- [运维前沿](https://mp.weixin.qq.com/s/X6x2ziLZGjCelJgXECdhPg)
+- [鱼 da 王](https://mp.weixin.qq.com/s/DdxK3j31TUWLNVhZtWTuVA)
+- [程序员小宋](https://mp.weixin.qq.com/s/llgdqSN3AIXMlEbBuPkKNQ)
+- [架构师修行之路](https://mp.weixin.qq.com/s/-HWx7VZC6NthROGBaATcLA)
+- [前端徐徐](https://mp.weixin.qq.com/s/OQriNzz3LrheOWgchKpvrw)
+- [科妙知行](https://mp.weixin.qq.com/s/smcivd8MNAbo0MtXdoVKaw)
+- [西建大 iOS 众创空间俱乐部](https://mp.weixin.qq.com/s/YQooBjWoAg4WFIp5A4k9tw)
+- [AMC 真题库](https://mp.weixin.qq.com/s/LOzNVEXtlRv_3vIDhYjyFg)
+- [不止于 python](https://mp.weixin.qq.com/s/0zd3t7k9CYcwTLevh0KFHw)
+- [Daily 词语仓](https://mp.weixin.qq.com/s/3SPtQuvC3ohmQICtg4tbAw)
+- [没事学点 AI 小知识](https://mp.weixin.qq.com/s/rV3eNxWsJbAs93azg9q74Q)
+- [攻城狮成长日记](https://mp.weixin.qq.com/s/PqtqTCWAlDsInjamND94Jw)
+- [口袋狗](https://mp.weixin.qq.com/s/YZzhUjDIhF5JD_ierQc5Ng)
+- [原来开源](https://mp.weixin.qq.com/s/BYXUaF9xK8aTjTSYSkl89g)
+- [Jackywine](https://mp.weixin.qq.com/s/6ZT_oUQMDVskdHdA6T1gQA)
+- [轱辘凯 glookai](https://mp.weixin.qq.com/s/d-CFbMnX4ABEWB-abd2p_A)
+- [小竹读研在养鱼](https://mp.weixin.qq.com/s/NJ_GpCBjQzZIZTbZz3btTg)
+
+注：如果你使用了本 Markdown 编辑器进行内容排版，并且希望在本项目 README 中展示你的公众号，请到 [#5](https://github.com/doocs/md/discussions/5) 留言。

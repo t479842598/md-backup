@@ -105,7 +105,7 @@ function recoverHistory() {
       <!-- 新增文章 -->
       <Dialog v-model:open="isOpen">
         <DialogTrigger as-child>
-          <Button variant="outline" class="w-full" size="sm">
+          <Button variant="outline" class="w-full" size="xs">
             <Plus /> 新增内容
           </Button>
         </DialogTrigger>
@@ -135,7 +135,7 @@ function recoverHistory() {
         <span class="line-clamp-1">{{ post.title }}</span>
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
-            <Button size="sm" variant="ghost" class="ml-auto px-1.5">
+            <Button size="xs" variant="ghost" class="ml-auto px-1.5">
               <Ellipsis class="size-4" />
             </Button>
           </DropdownMenuTrigger>

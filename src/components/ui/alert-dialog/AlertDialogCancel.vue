@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getButtonClasses } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { AlertDialogCancel, type AlertDialogCancelProps } from 'radix-vue'
 import { computed, type HTMLAttributes } from 'vue'
@@ -17,7 +17,7 @@ const delegatedProps = computed(() => {
   <AlertDialogCancel
     v-bind="delegatedProps"
     :class="cn(
-      getButtonClasses({ variant: 'outline' }),
+      buttonVariants({ variant: 'outline' }),
       'mt-2 sm:mt-0',
       props.class,
     )"

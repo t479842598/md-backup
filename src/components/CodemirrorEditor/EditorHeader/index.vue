@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ScrollingNotification from '@/components/ScrollingNotification.vue'
 import { Toaster } from '@/components/ui/sonner'
+
 import {
   altSign,
   ctrlKey,
@@ -127,10 +128,7 @@ function copy() {
               微信外链转底部引用
             </MenubarCheckboxItem>
             <MenubarSeparator />
-            <MenubarCheckboxItem
-              :checked="isCountStatus"
-              @click="countStatusChanged()"
-            >
+            <MenubarCheckboxItem :checked="isCountStatus" @click="countStatusChanged()">
               统计字数和阅读时间
             </MenubarCheckboxItem>
           </MenubarContent>
@@ -189,11 +187,7 @@ function copy() {
               <ChevronDownIcon class="text-secondary-foreground h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent
-            align="end"
-            :align-offset="-5"
-            class="w-[200px]"
-          >
+          <DropdownMenuContent align="end" :align-offset="-5" class="w-[200px]">
             <DropdownMenuRadioGroup v-model="copyMode">
               <DropdownMenuRadioItem value="txt">
                 公众号格式

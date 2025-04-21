@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import BackupManager from '@/components/BackupManager.vue'
 import {
   codeBlockThemeOptions,
   colorOptions,
@@ -25,11 +24,6 @@ function customStyle() {
 }
 
 const isOpen = ref(false)
-const isOpenBackupDialog = ref(false)
-
-function openBackupManager() {
-  isOpenBackupDialog.value = true
-}
 
 const addPostInputVal = ref(``)
 
@@ -255,16 +249,16 @@ const formatOptions = ref<Format[]>([`rgb`, `hex`, `hsl`, `hsv`])
           <Button
             class="w-full" variant="outline" :class="{
               'border-black dark:border-white': !isDark,
-            }" @click="store.toggleDark()"
+            }" @click="store.toggleDark(false)"
           >
-            <Sun :size="15" class="mr-0" />
+            <Sun class="h-4 w-4" />
           </Button>
           <Button
             class="w-full" variant="outline" :class="{
               'border-black dark:border-white': isDark,
-            }" @click="store.toggleDark()"
+            }" @click="store.toggleDark(true)"
           >
-            <Moon :size="15" class="mr-0" />
+            <Moon class="h-4 w-4" />
           </Button>
         </div>
       </div>
@@ -274,35 +268,8 @@ const formatOptions = ref<Format[]>([`rgb`, `hex`, `hsl`, `hsv`])
           重置
         </Button>
       </div>
-      <div class="space-y-2">
-        <h2>备份管理</h2>
-        <div class="grid grid-cols-1 justify-items-center gap-2">
-          <Button class="w-full" variant="outline" @click="openBackupManager">
-            打开备份管理
-          </Button>
-        </div>
-      </div>
     </div>
   </div>
-
-  <Dialog v-model:open="isOpenBackupDialog">
-    <DialogContent class="max-h-[80vh] max-w-4xl flex flex-col overflow-hidden">
-      <DialogHeader>
-        <DialogTitle>备份管理</DialogTitle>
-        <DialogDescription>
-          管理您的本地备份，导入和导出备份数据
-        </DialogDescription>
-      </DialogHeader>
-      <div class="flex-1 overflow-auto">
-        <BackupManager />
-      </div>
-      <DialogFooter>
-        <Button variant="outline" @click="isOpenBackupDialog = false">
-          关闭
-        </Button>
-      </DialogFooter>
-    </DialogContent>
-  </Dialog>
 </template>
 
 <style scoped lang="less">

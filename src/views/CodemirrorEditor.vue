@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ComponentPublicInstance } from 'vue'
-// 导入备份管理器组件
 import BackupManager from '@/components/BackupManager.vue'
 import ScrollingNotification from '@/components/ScrollingNotification.vue'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
@@ -397,30 +396,21 @@ function toggleBackupManager() {
 <template>
   <div ref="container" class="container flex flex-col">
     <EditorHeader
-      @add-format="addFormat"
-      @format-content="formatContent"
-      @start-copy="startCopy"
-      @end-copy="endCopy"
+      @add-format="addFormat" @format-content="formatContent" @start-copy="startCopy" @end-copy="endCopy"
       @toggle-backup-manager="toggleBackupManager"
     />
     <main class="container-main flex flex-1 flex-col">
       <div class="container-main-section border-radius-10 relative flex flex-1 overflow-hidden border-1">
         <PostSlider />
         <div
-          ref="codeMirrorWrapper"
-          class="codeMirror-wrapper flex-1"
-          :class="{
+          ref="codeMirrorWrapper" class="codeMirror-wrapper flex-1" :class="{
             'order-1 border-l': !store.isEditOnLeft,
             'border-r': store.isEditOnLeft,
           }"
         >
           <ContextMenu>
             <ContextMenuTrigger>
-              <textarea
-                id="editor"
-                type="textarea"
-                placeholder="Your markdown text here."
-              />
+              <textarea id="editor" type="textarea" placeholder="Your markdown text here." />
             </ContextMenuTrigger>
             <ContextMenuContent class="w-64">
               <ContextMenuItem inset @click="toggleShowUploadImgDialog()">
@@ -462,11 +452,7 @@ function toggleBackupManager() {
           </ContextMenu>
         </div>
         <div class="relative flex-1">
-          <div
-            id="preview"
-            ref="preview"
-            class="preview-wrapper p-5"
-          >
+          <div id="preview" ref="preview" class="preview-wrapper p-5">
             <div id="output-wrapper" :class="{ output_night: !backLight }">
               <div class="preview border-x-1 shadow-xl">
                 <section id="output" v-html="output" />
@@ -483,18 +469,20 @@ function toggleBackupManager() {
           </div>
           <div
             class="bg-background absolute left-0 top-0 border rounded-2 rounded-lt-none p-2 text-sm shadow"
-            @mouseenter="() => isOpenHeadingSlider = true"
-            @mouseleave="() => isOpenHeadingSlider = false"
+            @mouseenter="() => isOpenHeadingSlider = true" @mouseleave="() => isOpenHeadingSlider = false"
           >
             <List class="size-6" />
             <ul
-              class="overflow-auto transition-all"
-              :class="{
+              class="overflow-auto transition-all" :class="{
                 'max-h-0 w-0': !isOpenHeadingSlider,
                 'max-h-100 w-60 mt-2': isOpenHeadingSlider,
               }"
             >
-              <li v-for="(item, index) in store.titleList" :key="index" class="line-clamp-1 py-1 leading-6 hover:bg-gray-300 dark:hover:bg-gray-600" :style="{ paddingLeft: `${item.level - 0.5}em` }">
+              <li
+                v-for="(item, index) in store.titleList" :key="index"
+                class="line-clamp-1 py-1 leading-6 hover:bg-gray-300 dark:hover:bg-gray-600"
+                :style="{ paddingLeft: `${item.level - 0.5}em` }"
+              >
                 <a :href="item.url">
                   {{ item.title }}
                 </a>
@@ -532,20 +520,19 @@ function toggleBackupManager() {
         </AlertDialogContent>
       </AlertDialog>
     </main>
-  </div>
 
-  <!-- 添加备份管理对话框 -->
-  <Dialog v-model:open="isBackupManagerOpen">
-    <DialogContent class="max-h-[90vh] max-w-3xl overflow-y-auto">
-      <DialogHeader>
-        <DialogTitle>备份管理</DialogTitle>
-        <DialogDescription>
-          管理已保存的备份，可以创建、恢复或删除备份
-        </DialogDescription>
-      </DialogHeader>
-      <BackupManager />
-    </DialogContent>
-  </Dialog>
+    <Dialog v-model:open="isBackupManagerOpen">
+      <DialogContent class="max-h-[90vh] max-w-3xl overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle>备份管理</DialogTitle>
+          <DialogDescription>
+            管理已保存的备份，可以创建、恢复或删除备份
+          </DialogDescription>
+        </DialogHeader>
+        <BackupManager />
+      </DialogContent>
+    </Dialog>
+  </div>
 </template>
 
 <style lang="less" scoped>

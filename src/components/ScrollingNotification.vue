@@ -1,9 +1,16 @@
 <script setup lang="ts">
-import { useStore } from '@/stores'
 import { BellRing } from 'lucide-vue-next'
+import { ref } from 'vue'
 
-const store = useStore()
-const { isDark } = storeToRefs(store)
+// 简化版实现，不依赖于store
+const isDark = ref(false)
+// 检查localStorage中的主题设置
+function checkDarkMode() {
+  const theme = localStorage.getItem(`theme`)
+  isDark.value = theme === `dark`
+}
+// 初始检查
+checkDarkMode()
 
 const notificationText = `微信markdown编辑器项目，更新内容为增加数据备份和自动备份，需要定制联系公众号：战渊IT助手`
 </script>
@@ -94,6 +101,7 @@ const notificationText = `微信markdown编辑器项目，更新内容为增加�
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
